@@ -1,8 +1,15 @@
 import React from 'react';
 
+import GlobalStyle from './styles/GlobalStyles';
+import StarsFall from './components/StarsFall';
+
+
 function App() {
   return (
-    <h1>Hello World!</h1>
+    <>
+    <StarsFall/>
+    <GlobalStyle/>
+    </>
   );
 }
 
