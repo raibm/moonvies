@@ -1,13 +1,13 @@
 import React from 'react';
 
 import GlobalStyle from './styles/GlobalStyles';
-import StarsFall from './components/StarsFall';
+import MainGrid from './components/MainGrid';
 
 
 function App() {
   return (
     <>
-    <StarsFall/>
+    <MainGrid/>
     <GlobalStyle/>
     </>
   );
