@@ -1,6 +1,6 @@
 import React from 'react';
 
-import GlobalStyle from './styles/GlobalStyles';
+import GlobalStyle from './assets/styles/GlobalStyles';
 import LoginPage from './components/Login';
 
 
