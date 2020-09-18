@@ -1,13 +1,15 @@
 import React from 'react';
 
 import GlobalStyle from './styles/GlobalStyles';
-import StarsFall from './components/StarsFall';
+import MainGrid from './components/MainGrid';
+import LoginPage from './components/Login';
 
 
 function App() {
   return (
     <>
-    <StarsFall/>
+    <LoginPage/>
+    {/* <MainGrid/> */}
     <GlobalStyle/>
     </>
   );
