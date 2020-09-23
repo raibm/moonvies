@@ -11,15 +11,15 @@ const LoginPage: React.FC = () => {
       <SecondStar />
       <Moon>
         <InputZone>
-          <InputValue/>
-          <InputValue />
+          <InputValue placeholder="Login"/>
+          <InputValue placeholder="Password"/>
         </InputZone>
         <ButtonsZone>
         <LoginButton>
           <p>Login</p>
         </LoginButton>
         <NewAccountLink>
-          New account...
+         <a href="">New account...</a> 
         </NewAccountLink>
         </ButtonsZone>
       </Moon>

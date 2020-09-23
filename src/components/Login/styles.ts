@@ -8,6 +8,14 @@ const borderRadius = css`
   border-bottom-left-radius: 30px;
 `;
 
+const fontProperties = css`
+  font-family: Rounded Mplus 1c Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+`;
+
 export const MoonContainer = styled.div`
   width: 100%;
   height: 100vh;
@@ -66,18 +74,35 @@ export const ButtonsZone = styled.div`
 `;
 
 export const InputValue = styled.input`
-  ${borderRadius}
+  ${borderRadius};
+  ${fontProperties};
 
   width: 40vh;
   height: 6vh;
 
   margin-bottom: 5px;
+  padding-left: 40px;
 
   background: rgba(0, 0, 0, 0.4);
+
+  ::placeholder {
+    ${fontProperties};
+
+    color: rgba(0, 0, 0, 0.3);
+
+    transition: 0.2s;
+  }
+
+  :focus {
+    outline: none;
+    ::placeholder{
+      color: rgba(0, 0, 0, 0.1);
+    }
+  }
 `;
 
 export const LoginButton = styled.button`
-  ${borderRadius}
+  ${borderRadius};
 
   width: 15vh;
   height: 5vh;
@@ -88,9 +113,23 @@ export const LoginButton = styled.button`
   margin-bottom: 15%;
 
   p {
-    color: #FF7A00;
+    ${fontProperties};
+
+    color: #ff7a00;
   }
 `;
 
-export const NewAccountLink = styled.a`
+export const NewAccountLink = styled.span`
+  a {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+    color: black;
+
+    :link {
+      text-decoration: none;
+    }
+  }
 `;
