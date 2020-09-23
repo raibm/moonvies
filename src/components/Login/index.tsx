@@ -19,7 +19,7 @@ const LoginPage: React.FC = () => {
           <p>Login</p>
         </LoginButton>
         <NewAccountLink>
-         <a href="">New account...</a> 
+         <a href="/">New account...</a> 
         </NewAccountLink>
         </ButtonsZone>
       </Moon>
