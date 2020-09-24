@@ -112,10 +112,23 @@ export const LoginButton = styled.button`
   margin-top: 50%;
   margin-bottom: 15%;
 
+  outline: none;
+
   p {
     ${fontProperties};
 
-    color: #ff7a00;
+    color: black;
+
+    transition: 0.2s;
+  }
+
+  :hover {
+    background: rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+
+    p{
+      color: #e4c772;
+    }
   }
 `;
 
@@ -124,12 +137,132 @@ export const NewAccountLink = styled.span`
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-style: normal;
     font-weight: bold;
-    font-size: 18px;
-    line-height: 18px;
+    font-size: 15px;
+    line-height: 15px;
+    margin-left: 10px;
     color: black;
 
     :link {
       text-decoration: none;
+    }
+
+    :hover {
+      text-decoration: underline;
+    }
+  }
+`;
+
+export const FirstStar = styled.div`
+  width: 1px;
+  height: 1px;
+  border-radius: 50%;
+
+  background: white;
+
+  animation: 6s fall ease infinite;
+  position: absolute;
+
+  @keyframes fall{
+    0% {
+      opacity: 0;
+      margin-top: 0;
+    }
+    20% {
+      width: 3px;
+      height: 3px;
+      opacity: 0.4
+    }
+    25%{
+      opacity: 1;
+    }
+    29%{
+      opacity: 0.5
+    }
+    35% {
+      opacity: 1;
+    }
+    65% {
+      width: 2px;
+      height: 2px;
+      opacity: 0.1;
+    }
+    99% {
+      margin-top: 60vh;
+      margin-left: 99vw;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+`;
+
+export const SecondStar = styled.div`
+  width: 1px;
+  height: 1px;
+  border-radius: 50%;
+
+  position: absolute;
+
+  background: white;
+
+  animation: 5s fallTwo ease infinite;
+
+  @keyframes fallTwo{
+    0% {
+      opacity: 0;
+      margin-left: 2vw;
+    }
+    20% {
+      opacity: 0.4;
+    }
+    35% {
+      opacity: 1;
+    }
+    65% {
+      opacity: 0.2;
+    }
+    99% {
+      margin-top: 60vh;
+      margin-left: 69vw;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+`;
+
+export const ThirdStar = styled.div`
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+
+  position: absolute;
+
+  background: white;
+
+  animation: 8s fallThree ease-out infinite;
+
+  @keyframes fallThree{
+    0% {
+      opacity: 0;
+      margin-top:30vh;
+      margin-left:2vw;
+    }
+    20% {
+      opacity: 0.4;
+    }
+    35% {
+      opacity: 1;
+    }
+    65% {
+      opacity: 0.2;
+    }
+    99% {
+      margin-top: 90vh;
+      margin-left: 69vw;
+    }
+    100% {
+      opacity: 0;
     }
   }
 `;

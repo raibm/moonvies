@@ -1,5 +1,5 @@
 import React from 'react';
-import { Background, Header, Main, Footer, FirstStar, SecondStar } from './styles';
+import { Background, Header, Main, Footer } from './styles';
 
 import './styles';
 
@@ -9,8 +9,6 @@ const MainGrid: React.FC = () => {
     <Header>
     </Header>
     <Main>
-      <FirstStar/>
-      <SecondStar/>
     </Main>
     <Footer>
     </Footer>
