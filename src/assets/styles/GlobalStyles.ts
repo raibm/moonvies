@@ -20,10 +20,13 @@ html, body {
 }
 
 :root {
-  /* Variaveis de cores globais */
-    /* --main-color: #262626;
-    --almost-black: #181818;
-    --default-icon-color: #F8F8FF;
-    --actived-icon-color: #FF9000; */
+    --main-color: #070712;
+    --input-soft-color: rgba(0, 0, 0, 0.4);
+    --input-placeholder-soft-color: rgba(0, 0, 0, 0.3);
+    --input-placeholder-focus-soft-color: rgba(0, 0, 0, 0.1);
+    --dark-button-color: rgba(0, 0, 0, 0.8);
+    --dark-button-hover-color: rgba(0, 0, 0, 0.7);
+    --moon-color: #c4c4c4;
+    --hover-color: #FF9000;
   }
 `;

@@ -20,7 +20,7 @@ export const MoonContainer = styled.div`
   width: 100%;
   height: 100vh;
 
-  background: #070712;
+  background: var(--main-color);
 
   display: grid;
   grid-row-gap: 0px;
@@ -36,7 +36,7 @@ export const Moon = styled.div`
   grid-row-end: 4;
   grid-column-start: 2;
 
-  background: #c4c4c4;
+  background: var(--moon-color);
   border-radius: 50%;
 
   justify-self: center;
@@ -56,21 +56,34 @@ export const Moon = styled.div`
     width: 50vh;
     height: 50vh;
   }
+
+  @media (max-width: 300px) {
+    width: 40vh;
+    height: 40vh;
+  }
 `;
 
 export const InputZone = styled.div`
   height: 35vh;
+
   display: flex;
   flex-direction: column;
+
   align-items: center;
   justify-content: flex-end;
 `;
 
 export const ButtonsZone = styled.div`
   height: 20vh;
+
   display: flex;
   flex-direction: column;
+
   align-items: center;
+  
+  @media(max-width: 420px){
+    height: 25vh;
+  }
 `;
 
 export const InputValue = styled.input`
@@ -83,20 +96,20 @@ export const InputValue = styled.input`
   margin-bottom: 5px;
   padding-left: 40px;
 
-  background: rgba(0, 0, 0, 0.4);
+  background: var(--input-soft-color);
 
   ::placeholder {
     ${fontProperties};
 
-    color: rgba(0, 0, 0, 0.3);
+    color: var(--input-placeholder-soft-color);
 
     transition: 0.2s;
   }
 
   :focus {
     outline: none;
-    ::placeholder{
-      color: rgba(0, 0, 0, 0.1);
+    ::placeholder {
+      color: var(--input-placeholder-focus-soft-color);
     }
   }
 `;
@@ -107,7 +120,7 @@ export const LoginButton = styled.button`
   width: 15vh;
   height: 5vh;
 
-  background: rgba(0, 0, 0, 0.8);
+  background: var(--dark-button-color);
 
   margin-top: 50%;
   margin-bottom: 15%;
@@ -117,24 +130,54 @@ export const LoginButton = styled.button`
   p {
     ${fontProperties};
 
-    color: black;
-
+    color: #ff7a00;
     transition: 0.2s;
   }
 
   :hover {
-    background: rgba(0, 0, 0, 0.7);
+    background: #ff7a00;
     cursor: pointer;
 
-    p{
-      color: #e4c772;
+    p {
+      color: var(--dark-button-color);
+    }
+  }
+
+  @media (max-width: 420px) {
+    width: 12vh;
+    height: 4vh;
+
+    p {
+      ${fontProperties};
+      font-size: 14px;
+      line-height: 14px;
+      color: #ff7a00;
+      transition: 0.2s;
+    }
+
+    :hover {
+      background: #ff7a00;
+      cursor: pointer;
+
+      p {
+        color: var(--dark-button-color);
+      }
+    }
+
+  }
+
+  @media (max-height: 360px){
+    margin-top: 25%;
+
+    p {
+    font-size: 10px;
     }
   }
 `;
 
 export const NewAccountLink = styled.span`
   a {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 15px;
@@ -150,6 +193,17 @@ export const NewAccountLink = styled.span`
       text-decoration: underline;
     }
   }
+
+  @media(max-width: 420px){
+    a{
+      font-size: 10px;
+    }
+  }
+  @media (max-height: 360px){
+    a{
+      font-size: 10px;
+    }
+  }
 `;
 
 export const FirstStar = styled.div`
@@ -162,7 +216,7 @@ export const FirstStar = styled.div`
   animation: 6s fall ease infinite;
   position: absolute;
 
-  @keyframes fall{
+  @keyframes fall {
     0% {
       opacity: 0;
       margin-top: 0;
@@ -170,13 +224,13 @@ export const FirstStar = styled.div`
     20% {
       width: 3px;
       height: 3px;
-      opacity: 0.4
+      opacity: 0.4;
     }
-    25%{
+    25% {
       opacity: 1;
     }
-    29%{
-      opacity: 0.5
+    29% {
+      opacity: 0.5;
     }
     35% {
       opacity: 1;
@@ -207,7 +261,7 @@ export const SecondStar = styled.div`
 
   animation: 5s fallTwo ease infinite;
 
-  @keyframes fallTwo{
+  @keyframes fallTwo {
     0% {
       opacity: 0;
       margin-left: 2vw;
@@ -242,11 +296,11 @@ export const ThirdStar = styled.div`
 
   animation: 8s fallThree ease-out infinite;
 
-  @keyframes fallThree{
+  @keyframes fallThree {
     0% {
       opacity: 0;
-      margin-top:30vh;
-      margin-left:2vw;
+      margin-top: 30vh;
+      margin-left: 2vw;
     }
     20% {
       opacity: 0.4;
