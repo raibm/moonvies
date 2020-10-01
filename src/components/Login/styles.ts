@@ -84,6 +84,10 @@ export const ButtonsZone = styled.div`
   @media(max-width: 420px){
     height: 25vh;
   }
+
+  @media(max-width: 820px) and (max-height: 420px){
+    height: 25vh;
+  }
 `;
 
 export const InputValue = styled.input`
@@ -129,6 +133,7 @@ export const LoginButton = styled.button`
 
   p {
     ${fontProperties};
+    font-size: 2vh;
 
     color: #ff7a00;
     transition: 0.2s;
@@ -144,13 +149,8 @@ export const LoginButton = styled.button`
   }
 
   @media (max-width: 420px) {
-    width: 12vh;
-    height: 4vh;
-
     p {
       ${fontProperties};
-      font-size: 14px;
-      line-height: 14px;
       color: #ff7a00;
       transition: 0.2s;
     }
@@ -166,11 +166,11 @@ export const LoginButton = styled.button`
 
   }
 
-  @media (max-height: 360px){
+  @media(max-width: 520px){
     margin-top: 25%;
 
     p {
-    font-size: 10px;
+    font-size: 1.8vh;
     }
   }
 `;
@@ -180,8 +180,7 @@ export const NewAccountLink = styled.span`
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     font-style: normal;
     font-weight: bold;
-    font-size: 15px;
-    line-height: 15px;
+    font-size: 2vh;
     margin-left: 10px;
     color: black;
 
@@ -194,14 +193,9 @@ export const NewAccountLink = styled.span`
     }
   }
 
-  @media(max-width: 420px){
+  @media(max-width: 520px){
     a{
-      font-size: 10px;
-    }
-  }
-  @media (max-height: 360px){
-    a{
-      font-size: 10px;
+      font-size: 1.5vh;
     }
   }
 `;
