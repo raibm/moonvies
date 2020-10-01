@@ -26,6 +26,7 @@ export const MoonContainer = styled.div`
   grid-row-gap: 0px;
   grid-template-columns: 1fr 4fr 1fr;
   grid-template-rows: 15vh 35vh 35vh 15vh;
+
 `;
 
 export const Moon = styled.div`
@@ -48,18 +49,23 @@ export const Moon = styled.div`
   justify-content: center;
 
   @media (max-width: 500px) {
-    width: 40vh;
-    height: 40vh;
+    border-radius: 0%;
+    width: 100vw;
+    height: 100vh;
+
+    grid-row-start: 1;
+    grid-row-end: 5; 
+    grid-column-start: 2;
   }
 
-  @media (max-width: 500px) and (max-height: 670px) {
-    width: 50vh;
-    height: 50vh;
-  }
+  @media (max-height: 500px) {
+    border-radius: 0%;
+    width: 100vw;
+    height: 100vh;
 
-  @media (max-width: 300px) {
-    width: 40vh;
-    height: 40vh;
+    grid-row-start: 1;
+    grid-row-end: 5; 
+    grid-column-start: 2;
   }
 `;
 
@@ -81,13 +87,6 @@ export const ButtonsZone = styled.div`
 
   align-items: center;
   
-  @media(max-width: 420px){
-    height: 25vh;
-  }
-
-  @media(max-width: 820px) and (max-height: 420px){
-    height: 25vh;
-  }
 `;
 
 export const InputValue = styled.input`
@@ -148,29 +147,14 @@ export const LoginButton = styled.button`
     }
   }
 
-  @media (max-width: 420px) {
-    p {
-      ${fontProperties};
-      color: #ff7a00;
-      transition: 0.2s;
-    }
+  @media (max-height: 500px) {
+    margin-top: 10%;
 
-    :hover {
-      background: #ff7a00;
-      cursor: pointer;
-
-      p {
-        color: var(--dark-button-color);
-      }
-    }
-
-  }
-
-  @media(max-width: 520px){
-    margin-top: 25%;
+    width: 21vh;
+    height: 7vh;
 
     p {
-    font-size: 1.8vh;
+      font-size: 3vh;
     }
   }
 `;
