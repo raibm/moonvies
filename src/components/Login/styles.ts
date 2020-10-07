@@ -26,7 +26,6 @@ export const MoonContainer = styled.div`
   grid-row-gap: 0px;
   grid-template-columns: 1fr 4fr 1fr;
   grid-template-rows: 15vh 35vh 35vh 15vh;
-
 `;
 
 export const Moon = styled.div`
@@ -54,7 +53,7 @@ export const Moon = styled.div`
     height: 100vh;
 
     grid-row-start: 1;
-    grid-row-end: 5; 
+    grid-row-end: 5;
     grid-column-start: 2;
   }
 
@@ -64,7 +63,7 @@ export const Moon = styled.div`
     height: 100vh;
 
     grid-row-start: 1;
-    grid-row-end: 5; 
+    grid-row-end: 5;
     grid-column-start: 2;
   }
 `;
@@ -86,7 +85,6 @@ export const ButtonsZone = styled.div`
   flex-direction: column;
 
   align-items: center;
-  
 `;
 
 export const InputValue = styled.input`
@@ -97,7 +95,7 @@ export const InputValue = styled.input`
   height: 6vh;
 
   margin-bottom: 5px;
-  padding-left: 40px;
+  padding-left: 2vh;
 
   background: var(--input-soft-color);
 
@@ -113,6 +111,19 @@ export const InputValue = styled.input`
     outline: none;
     ::placeholder {
       color: var(--input-placeholder-focus-soft-color);
+    }
+  }
+
+  @media (max-height: 500px) {
+    width: 50vh;
+    height: 9vh;
+    
+    ::placeholder {
+      ${fontProperties};
+      
+      padding-left: 2px!important;
+
+      font-size: 3.5vh;
     }
   }
 `;
@@ -150,11 +161,11 @@ export const LoginButton = styled.button`
   @media (max-height: 500px) {
     margin-top: 10%;
 
-    width: 21vh;
-    height: 7vh;
+    width: 25vh;
+    height: 10vh;
 
     p {
-      font-size: 3vh;
+      font-size: 3.5vh;
     }
   }
 `;
@@ -177,9 +188,15 @@ export const NewAccountLink = styled.span`
     }
   }
 
-  @media(max-width: 520px){
-    a{
+  @media (max-width: 520px) {
+    a {
       font-size: 1.5vh;
+    }
+  }
+
+  @media (max-height: 500px) {
+    a {
+      font-size: 3.5vh;
     }
   }
 `;
